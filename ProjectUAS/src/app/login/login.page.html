@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center;">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="">
+  <img src='assets/dmd1.png' alt="dmd1">
+
+  <ion-item>
+    <ion-label position="floating"> Username</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"> Password</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+  <br>
+  <ion-button [routerLink]="['/home']" expand="block" 
+  color="secondary" style="margin-bottom:5%">
+    Login
+  </ion-button>
+
+</ion-content>

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      All Item
+    </ion-title>
+
+      <ion-button [routerLink]="['/cart']">
+        <ion-icon slot="icon-only" name="cart" >
+        </ion-icon>
+      </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-row>
+      <ion-col *ngFor="let item of listProducts">
+        <ion-card>
+          <img src="{{item.gambar}}" alt="" />
+          <ion-card-title>{{item.name}}</ion-card-title>
+          <p>Price: {{item.price | currency:'Rp '}} </p>
+          <h4>{{item.desc}}</h4>
+          <ion-col size="3">
+            <ion-button size="small" expand="block" (click)="beli(item)"color="primary">
+              <div>Buy</div>
+            </ion-button>
+          </ion-col>
+          <ion-col size="4">
+            <ion-button size="small" fill="clear"  color="primary">
+              <ion-icon name="md-star-half"></ion-icon>
+              <div color="light"> Rating</div>
+            </ion-button>
+          </ion-col>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+</ion-content>
